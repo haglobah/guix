@@ -38,11 +38,11 @@
   ;; Below is the list of system services.  To search for available
   ;; services, run 'guix system search KEYWORD' in a terminal.
   (services
-   (append (list (service postgresql-service-type)
+   (append (list #;(service postgresql-service-type)
                  (service syncthing-service-type
                           (syncthing-configuration (user "beat")))
                  #;(dbus-service #:services (list bluez-alsa))
-                 (bluetooth-service #;#:auto-enable #;#t)
+                 #;(bluetooth-service #:auto-enable #t)
                  (service gnome-desktop-service-type)
                  (set-xorg-configuration
                   (xorg-configuration (keyboard-layout keyboard-layout))))
