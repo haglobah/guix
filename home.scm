@@ -26,19 +26,15 @@
       "xdg-desktop-portal-gtk"
       "firefox"
       "ungoogled-chromium"
-      "blueman"
       "syncthing"
       "guix-icons"))
 
 (define dev-packages
     (list
       "git"
-      "racket"
+      "racket@8.7"
       "erlang"
       "elixir"
-      "python"
-      "python-pygments"
-      "readline"
       "gcc-toolchain"
       "make"
       "inotify-tools"
