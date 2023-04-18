@@ -75,6 +75,8 @@
                               ("gf" . "git pull")
                               ("gl" . "git log --oneline --decorate --graph")
                               ("gp" . "git push")
+                              ("gra" . "git remote add")
+                              ("grv" . "git remote -v")
                               ("grep" . "grep --color=auto")
                               ("gs" . "git status -s -b")
                               ("gst" . "git status")
