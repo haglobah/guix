@@ -12,7 +12,9 @@
 (use-modules (gnu)
 			 (nongnu packages linux)
 			 (gnu services databases)
-             (gnu services syncthing))
+       (gnu services syncthing)
+       (gnu packages docker)
+       (gnu services docker))
 (use-service-modules cups desktop networking ssh xorg)
 
 (operating-system
@@ -29,20 +31,18 @@
                   (comment "Beat Hagenlocher")
                   (group "users")
                   (home-directory "/home/beat")
-                  (supplementary-groups '("wheel" "netdev" "audio" "video")))
+                  (supplementary-groups '("wheel" "netdev" "audio" "video" "docker")))
                 %base-user-accounts))
   (packages (append (list (specification->package "nss-certs"))
-                    ;bluez bluez-alsa
+                    (list docker)
                     %base-packages))
 
   ;; Below is the list of system services.  To search for available
   ;; services, run 'guix system search KEYWORD' in a terminal.
   (services
-   (append (list #;(service postgresql-service-type)
+   (append (list (service docker-service-type)
                  (service syncthing-service-type
                           (syncthing-configuration (user "beat")))
-                 #;(dbus-service #:services (list bluez-alsa))
-                 #;(bluetooth-service #:auto-enable #t)
                  (service gnome-desktop-service-type)
                  (set-xorg-configuration
                   (xorg-configuration (keyboard-layout keyboard-layout))))
