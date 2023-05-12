@@ -83,6 +83,7 @@
                               ("tarz" . "tar -cvf")
 
                               ("ga" . "git add")
+                              ("gu" . "git restore --staged")
                               ("gb" . "git branch -a -v")
                               ("gsw" . "git switch")
                               ("gcb" . "git checkout -b")
@@ -97,12 +98,17 @@
                               ("gst" . "git status")
 
                               ("xsh" . "guix shell")
-                              ("xpkg" . "guix package")
+                              ("xp" . "guix package")
+                              ("xl" . "guix package --list-installed")
                               ("xi" . "guix install")
                               ("xse" . "guix search")
                               ("xpa" . "guix pack")
                               ("xh" . "guix home")
-                              ("xsys" . "guix system")
+                              ("xhre" . "guix home reconfigure")
+                              ("xs" . "guix system")
+                              ("xsl" . "guix system list-generations")
+                              ("xsw" . "guix system switch-generations")
+                              ("xsre" . "sudo -E guix system reconfigure")
                               ("x" . "guix")
 
                               ("start_psql_db" . "/gnu/store/qyyvxss45hqi000wwxkbil7qmgr1ra08-postgresql-10.21/bin/pg_ctl -D /var/lib/postgresql/data -l logfile start")
