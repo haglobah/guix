@@ -12,7 +12,6 @@
 (use-modules (gnu)
 			 (nongnu packages linux)
 			 (gnu services databases)
-       (gnu services syncthing)
        (gnu packages docker)
        (gnu services docker))
 (use-service-modules cups desktop networking ssh xorg)
@@ -41,8 +40,6 @@
   ;; services, run 'guix system search KEYWORD' in a terminal.
   (services
    (append (list (service docker-service-type)
-                 (service syncthing-service-type
-                          (syncthing-configuration (user "beat")))
                  (service gnome-desktop-service-type)
                  (set-xorg-configuration
                   (xorg-configuration (keyboard-layout keyboard-layout))))
