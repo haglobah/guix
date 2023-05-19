@@ -99,8 +99,13 @@
 
                               ("xsh" . "guix shell")
                               ("xp" . "guix package")
+                              ("xpsw" . "guix package --switch-generations")
+                              ("xpb" . "guix package --roll-back")
                               ("xl" . "guix package --list-installed")
+                              ("xlg" . "guix package --list-generations")
                               ("xi" . "guix install")
+                              ("xup" . "guix package --do-not-upgrade='racket|telegram|vscodium' -u")
+                              ("xu" . "guix package -r")
                               ("xse" . "guix search")
                               ("xpa" . "guix pack")
                               ("xh" . "guix home")
