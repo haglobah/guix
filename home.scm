@@ -99,8 +99,8 @@
 
                               ("xsh" . "guix shell")
                               ("xp" . "guix package")
-                              ("xpsw" . "guix package --switch-generations")
-                              ("xpb" . "guix package --roll-back")
+                              ("xsw" . "guix package --switch-generation")
+                              ("xrb" . "guix package --roll-back")
                               ("xl" . "guix package --list-installed")
                               ("xlg" . "guix package --list-generations")
                               ("xi" . "guix install")
@@ -112,7 +112,7 @@
                               ("xhre" . "guix home reconfigure")
                               ("xs" . "guix system")
                               ("xsl" . "guix system list-generations")
-                              ("xsw" . "guix system switch-generations")
+                              ("xssw" . "guix system switch-generations")
                               ("xsre" . "sudo -E guix system reconfigure")
                               ("x" . "guix")
 
