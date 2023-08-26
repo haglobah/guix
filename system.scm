@@ -32,6 +32,10 @@
                   (home-directory "/home/beat")
                   (supplementary-groups '("wheel" "netdev" "audio" "video" "docker")))
                 %base-user-accounts))
+  (groups (cons* (user-group
+                    (name "nixbld")
+                    (id 30000))
+                 %base-groups))
   (packages (append (list (specification->package "nss-certs"))
                     (list docker)
                     %base-packages))
