@@ -116,6 +116,8 @@
                               ("xsre" . "sudo -E guix system reconfigure")
                               ("x" . "guix")
 
+                              ("nix" . "sudo -i nix")
+
                               ("start_psql_db" . "/gnu/store/qyyvxss45hqi000wwxkbil7qmgr1ra08-postgresql-10.21/bin/pg_ctl -D /var/lib/postgresql/data -l logfile start")
                               ("obs" . "flatpak run md.obsidian.Obsidian")
                             ))
